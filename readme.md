@@ -34,7 +34,7 @@ The processor follows a modern out-of-order execution pipeline.
 ### Pipeline Stages
 
 1. **Instruction Fetch**
-   - Fetches up to three RV32I instructions every cycle.
+   - Fetchesthe next instruction every cycle.
 
 2. **Decode**
    - Decodes opcode, registers, immediates, and instruction type.
@@ -134,7 +134,6 @@ The ROB stores:
 - destination register
 - completion status
 - physical destination register
-- execution result
 
 Only committed instructions update the Architectural Register File.
 
@@ -148,7 +147,6 @@ The following waveform demonstrates instructions executing through the pipeline.
 
 The waveform illustrates:
 
-- multiple instructions executing simultaneously
 - operand forwarding over the CDB
 - register renaming
 - reservation station wake-up
@@ -268,6 +266,7 @@ These instructions verify that:
 - CSR Support
 - RV32M Extension (Multiply/Divide)
 - Full SoC addition with AHB Bus and memory mapped peripherals
+- Increase Issue Width and retire width.
 
 ---
 

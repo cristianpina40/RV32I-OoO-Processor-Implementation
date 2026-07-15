@@ -1,0 +1,218 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Jul 14 01:06:20 2026
+| Host         : Cristians-PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file ooo_core_top_control_sets_placed.rpt
+| Design       : ooo_core_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   140 |
+|    Minimum number of control sets                        |   140 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   257 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   140 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |    42 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    94 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              29 |           22 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             767 |          318 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            3203 |         1574 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|            Clock Signal            |               Enable Signal              |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------+------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_head               | reset_IBUF                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                     | u_rename_issue/we_rename_to_rob          | reset_IBUF                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[19][5]_i_1_n_0  | reset_IBUF                                 |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[10][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_rs_integer/rs[6][counter][5]_i_2_n_0   | u_rs_integer/rs[6][counter][5]_i_1_n_0     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[11][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_rs_integer/rs[7][counter][5]_i_2_n_0   | u_rs_integer/rs[7][counter][5]_i_1_n_0     |                1 |              6 |         6.00 |
+|  u_reorder_buffer/next_head        |                                          |                                            |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/next_rat            | reset_IBUF                                 |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[28][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[26][5]_i_1_n_0  | reset_IBUF                                 |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[4][5]_i_1_n_0   | reset_IBUF                                 |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[6][5]_i_1_n_0   | reset_IBUF                                 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[12][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[20][5]_i_1_n_0  | reset_IBUF                                 |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[13][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[17][5]_i_1_n_0  | reset_IBUF                                 |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[2][5]_i_1_n_0   | reset_IBUF                                 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[23][5]_i_1_n_0  | reset_IBUF                                 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[7][5]_i_1_n_0   | reset_IBUF                                 |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[29][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[21][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[22][5]_i_1_n_0  | reset_IBUF                                 |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[14][5]_i_1_n_0  | reset_IBUF                                 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[15][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[30][5]_i_1_n_0  | reset_IBUF                                 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[3][5]_i_1_n_0   | reset_IBUF                                 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[9][5]_i_1_n_0   | reset_IBUF                                 |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[16][5]_i_1_n_0  | reset_IBUF                                 |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[27][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[5][5]_i_1_n_0   | reset_IBUF                                 |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[8][5]_i_1_n_0   | reset_IBUF                                 |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[25][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[0][5]_i_1_n_0   | reset_IBUF                                 |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[18][5]_i_1_n_0  | reset_IBUF                                 |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[24][5]_i_1_n_0  | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_registerAliasTable/rat[1][5]_i_1_n_0   | reset_IBUF                                 |                2 |              6 |         3.00 |
+|  u_reorder_buffer/next_old_prd1__0 |                                          |                                            |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG                     | u_rs_integer/rs[1][counter][5]_i_2_n_0   | u_exec_unit_integer/SR[0]                  |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                     | u_rename_issue/rob_we_reg_0[0]           | u_rs_integer/rs[0][counter][5]_i_1_n_0     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG                     | u_rs_integer/rs[2][counter][5]_i_2_n_0   | u_rs_integer/rs[2][counter][5]_i_1_n_0     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG                     | u_rs_integer/rs[3][counter][5]_i_2_n_0   | u_rs_integer/rs[3][counter][5]_i_1_n_0     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                     | u_rs_integer/rs[5][counter][5]_i_2_n_0   | u_rs_integer/rs[5][counter][5]_i_1_n_0     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                     | u_rs_integer/rs[4][counter][5]_i_2_n_0   | u_rs_integer/rs[4][counter][5]_i_1_n_0     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG                     |                                          | u_reorder_buffer/commit_rd1[4]_i_1_n_0     |               11 |             11 |         1.00 |
+|  clk_IBUF_BUFG                     |                                          | u_reorder_buffer/commit_rd0[4]_i_1_n_0     |               11 |             12 |         1.09 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob                | reset_IBUF                                 |                8 |             17 |         2.12 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob57_out          | reset_IBUF                                 |                8 |             17 |         2.12 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob93_out          | reset_IBUF                                 |                6 |             17 |         2.83 |
+|  clk_IBUF_BUFG                     |                                          |                                            |               10 |             17 |         1.70 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob117_out         | reset_IBUF                                 |                6 |             17 |         2.83 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/rob[15][prd][5]_i_1_n_0 | reset_IBUF                                 |                4 |             17 |         4.25 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/rob[1][prd][5]_i_1_n_0  | reset_IBUF                                 |                9 |             17 |         1.89 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/rob[9][prd][5]_i_1_n_0  | reset_IBUF                                 |                3 |             17 |         5.67 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob69_out          | reset_IBUF                                 |                6 |             17 |         2.83 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob141_out         | reset_IBUF                                 |                7 |             17 |         2.43 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob153_out         | reset_IBUF                                 |                4 |             17 |         4.25 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob165_out         | reset_IBUF                                 |                6 |             17 |         2.83 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob177_out         | reset_IBUF                                 |                4 |             17 |         4.25 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob45_out          | reset_IBUF                                 |                9 |             17 |         1.89 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob189_out         | reset_IBUF                                 |                6 |             17 |         2.83 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/next_rob81_out          | reset_IBUF                                 |                7 |             17 |         2.43 |
+|  clk_IBUF_BUFG                     | u_reorder_buffer/rob[7][prd][5]_i_1_n_0  | reset_IBUF                                 |                6 |             17 |         2.83 |
+|  clk_IBUF_BUFG                     |                                          | u_inst_fetch/SR[0]                         |                4 |             23 |         5.75 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_9[0]        | reset_IBUF                                 |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_4[0]        | reset_IBUF                                 |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_12[0]       | reset_IBUF                                 |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_15[0]       | reset_IBUF                                 |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_19[0]       | reset_IBUF                                 |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_8[0]        | reset_IBUF                                 |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_56[0]       | reset_IBUF                                 |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                     |                                          | u_exec_unit_integer/cdb_result[31]_i_1_n_0 |               29 |             32 |         1.10 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_54[0]       | reset_IBUF                                 |               25 |             32 |         1.28 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_10[0]       | reset_IBUF                                 |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_12[0]       | reset_IBUF                                 |               23 |             32 |         1.39 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_18[0]       | reset_IBUF                                 |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_32[0]       | reset_IBUF                                 |               24 |             32 |         1.33 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_44[0]       | reset_IBUF                                 |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_15[0]       | reset_IBUF                                 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_55[0]       | reset_IBUF                                 |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_31[0]       | reset_IBUF                                 |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_51[0]       | reset_IBUF                                 |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_28[0]       | reset_IBUF                                 |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_10[0]       | reset_IBUF                                 |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_25[0]       | reset_IBUF                                 |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_5[0]        | reset_IBUF                                 |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_30[0]       | reset_IBUF                                 |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_34[0]       | reset_IBUF                                 |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_20[0]       | reset_IBUF                                 |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_36[0]       | reset_IBUF                                 |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_13[0]       | reset_IBUF                                 |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_17[0]       | reset_IBUF                                 |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_21[0]       | reset_IBUF                                 |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_11[0]       | reset_IBUF                                 |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_27[0]       | reset_IBUF                                 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_39[0]       | reset_IBUF                                 |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_42[0]       | reset_IBUF                                 |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_43[0]       | reset_IBUF                                 |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_45[0]       | reset_IBUF                                 |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_47[0]       | reset_IBUF                                 |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_48[0]       | reset_IBUF                                 |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_24[0]       | reset_IBUF                                 |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_49[0]       | reset_IBUF                                 |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_11[0]       | reset_IBUF                                 |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_41[0]       | reset_IBUF                                 |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_35[0]       | reset_IBUF                                 |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_26[0]       | reset_IBUF                                 |               26 |             32 |         1.23 |
+|  clk_IBUF_BUFG                     | u_cdb/E[0]                               | reset_IBUF                                 |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_29[0]       | reset_IBUF                                 |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_23[0]       | reset_IBUF                                 |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_37[0]       | reset_IBUF                                 |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_53[0]       | reset_IBUF                                 |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_19[0]       | reset_IBUF                                 |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_33[0]       | reset_IBUF                                 |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_40[0]       | reset_IBUF                                 |               27 |             32 |         1.19 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_16[0]       | reset_IBUF                                 |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_22[0]       | reset_IBUF                                 |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_46[0]       | reset_IBUF                                 |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_38[0]       | reset_IBUF                                 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_14[0]       | reset_IBUF                                 |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_50[0]       | reset_IBUF                                 |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[1]_52[0]       | reset_IBUF                                 |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_16[0]       | reset_IBUF                                 |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_17[0]       | reset_IBUF                                 |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_14[0]       | reset_IBUF                                 |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_7[0]        | reset_IBUF                                 |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_6[0]        | reset_IBUF                                 |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_18[0]       | reset_IBUF                                 |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                     | u_cdb/cdb_integer_prd_reg[2]_13[0]       | reset_IBUF                                 |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                     |                                          | u_rs_integer/SR[0]                         |               25 |             64 |         2.56 |
+|  clk_IBUF_BUFG                     | u_rs_integer/next_rs69_out               | reset_IBUF                                 |               33 |             69 |         2.09 |
+|  clk_IBUF_BUFG                     | u_rs_integer/next_rs63_out               | reset_IBUF                                 |               31 |             69 |         2.23 |
+|  clk_IBUF_BUFG                     | u_rename_issue/E[0]                      | reset_IBUF                                 |               27 |             69 |         2.56 |
+|  clk_IBUF_BUFG                     | u_rs_integer/next_rs57_out               | reset_IBUF                                 |               32 |             69 |         2.16 |
+|  clk_IBUF_BUFG                     | u_rs_integer/next_rs39_out               | reset_IBUF                                 |               30 |             69 |         2.30 |
+|  clk_IBUF_BUFG                     | u_rs_integer/next_rs33_out               | reset_IBUF                                 |               30 |             69 |         2.30 |
+|  clk_IBUF_BUFG                     | u_rs_integer/next_rs45_out               | reset_IBUF                                 |               35 |             69 |         1.97 |
+|  clk_IBUF_BUFG                     | u_rs_integer/next_rs51_out               | reset_IBUF                                 |               34 |             69 |         2.03 |
+|  clk_IBUF_BUFG                     | u_rs_integer/next_issue_idx              | reset_IBUF                                 |               55 |             83 |         1.51 |
+|  clk_IBUF_BUFG                     |                                          | reset_IBUF                                 |              238 |            625 |         2.63 |
++------------------------------------+------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+
+

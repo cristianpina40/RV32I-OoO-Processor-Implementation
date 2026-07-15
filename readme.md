@@ -259,16 +259,15 @@ These instructions verify that:
 
 ## Future Improvements
 
-- Branch Prediction
+- Branch Prediction bug fixes
 - Branch Target Buffer (BTB)
 - Return Address Stack (RAS)
 - Load/Store Queue
 - Memory Disambiguation
-- Multiple Execution Units
-- Branch Recovery
 - Exception Handling
 - CSR Support
 - RV32M Extension (Multiply/Divide)
+- Full SoC addition with AHB Bus and memory mapped peripherals
 
 ---
 

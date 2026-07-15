@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ooo_core_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_ooo_core_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="120.560 ns"></ZoomStartTime>
+      <ZoomEndTime time="302.061 ns"></ZoomEndTime>
+      <Cursor1Time time="248.440 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="200"></NameColumnWidth>
+      <ValueColumnWidth column_width="149"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/tb_ooo_core_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/commit_valid0_out" type="logic">
+      <obj_property name="ElementShortName">commit_valid0_out</obj_property>
+      <obj_property name="ObjectShortName">commit_valid0_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/commit_valid1_out" type="logic">
+      <obj_property name="ElementShortName">commit_valid1_out</obj_property>
+      <obj_property name="ObjectShortName">commit_valid1_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/commit_rd0_out" type="array">
+      <obj_property name="ElementShortName">commit_rd0_out[4:0]</obj_property>
+      <obj_property name="ObjectShortName">commit_rd0_out[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/commit_rd1_out" type="array">
+      <obj_property name="ElementShortName">commit_rd1_out[4:0]</obj_property>
+      <obj_property name="ObjectShortName">commit_rd1_out[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/commit_prd0_output" type="array">
+      <obj_property name="ElementShortName">commit_prd0_output[5:0]</obj_property>
+      <obj_property name="ObjectShortName">commit_prd0_output[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/commit_prd1_output" type="array">
+      <obj_property name="ElementShortName">commit_prd1_output[5:0]</obj_property>
+      <obj_property name="ObjectShortName">commit_prd1_output[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/dut/u_cdb/cdb_integer_prd" type="array">
+      <obj_property name="ElementShortName">cdb_integer_prd[5:0]</obj_property>
+      <obj_property name="ObjectShortName">cdb_integer_prd[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/dut/u_cdb/cdb_integer_result" type="array">
+      <obj_property name="ElementShortName">cdb_integer_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cdb_integer_result[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ooo_core_top/dut/u_cdb/cdb_integer_valid" type="logic">
+      <obj_property name="ElementShortName">cdb_integer_valid</obj_property>
+      <obj_property name="ObjectShortName">cdb_integer_valid</obj_property>
+   </wvobject>
+</wave_config>

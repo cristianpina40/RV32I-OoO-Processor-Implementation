@@ -1,4 +1,4 @@
-# 3-Wide Out-of-Order RISC-V (RV32I) Processor
+# 2-Wide Out-of-Order RISC-V (RV32I) Processor
 
 A 2-wide Out-of-Order (OoO) processor designed in **SystemVerilog** implementing the **RV32I** instruction set. The processor supports register renaming, dynamic scheduling, out-of-order execution, and in-order retirement through a Reorder Buffer (ROB).
 
